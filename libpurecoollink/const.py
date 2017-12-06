@@ -119,7 +119,7 @@ class HeatTarget:
         """
         if temperature < 34 or temperature > 98:
             raise DITTE(DITTE.FAHRENHEIT, temperature)
-        return str(int((int(temperature) + 459.67) * 5/9) * 10)
+        return str(round((int(temperature) + 459.67) * 5/9 * 10))
 
 
 class ResetFilter(Enum):
